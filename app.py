@@ -1,6 +1,7 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
+import Action
       
 root = Tk()
 root.geometry("800x500")
@@ -33,14 +34,15 @@ def Exiting():
    messagebox.showinfo( "Camera Mouse", "Thanks for Visiting! ")
    exit()
 ###main Function
-def main():
+def show():
    messagebox.showinfo( "Starting.....", "Program will Start")
+   Action.test()
 def info():
    messagebox.showinfo( "Information", "How to USE TOUR")
 
 img_satrt = ImageTk.PhotoImage(Image.open("img/start.png"))
 img_label=Label(image=img_satrt)
-B1 = Button(root,image=img_satrt ,borderwidth=0, command = main,bg=app_bg)
+B1 = Button(root,image=img_satrt ,borderwidth=0, command = show,bg=app_bg)
 B1.pack(pady=10)
 
 img_exit = ImageTk.PhotoImage(Image.open("img/exit.png"))
