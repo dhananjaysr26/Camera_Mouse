@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
-import Action
+#import Action
       
 root = Tk()
 root.geometry("800x500")
@@ -36,7 +36,7 @@ def Exiting():
 ###main Function
 def show():
    messagebox.showinfo( "Starting.....", "Program will Start")
-   Action.test()
+   #Action.Start()
 def info():
    messagebox.showinfo( "Information", "How to USE TOUR")
 
@@ -54,5 +54,25 @@ img_info = ImageTk.PhotoImage(Image.open("img/information.png"))
 img_label2=Label(image=img_info)
 B = Button(root, image=img_info, command = info,bg=app_bg)
 B.pack(pady=10,side = "right")
+#text
+
+img1 = ImageTk.PhotoImage(Image.open("img/startT.png"))
+panel11 = Label(root, image = img1,bg=app_bg)
+panel11.pack()
+
+var = StringVar()
+label22 = Label( root, textvariable=var, relief=RAISED )
+
+var.set("Hey!? How are you doing?")
+label22.pack()
+
+img112 = ImageTk.PhotoImage(Image.open("img/exitT.png"))
+panel11 = Label(root, image = img112,bg=app_bg)
+panel11.pack(side="left")
+
+img1122 = ImageTk.PhotoImage(Image.open("img/userG.png"))
+panel111 = Label(root, image = img1122,bg=app_bg)
+panel111.pack(side="right")
+
 
 mainloop()
