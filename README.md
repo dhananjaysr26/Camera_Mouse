@@ -14,3 +14,8 @@ Package to install
 	pip install opencv-python
 5. PyAutoGUI
 	pip install PyAutoGUI
+----------------------------------------------
+OR
+----------------------------------------------
+pip install -r requirements.txt
+* install  tkinter separately
