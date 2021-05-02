@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
-#import Action
+
       
 root = Tk()
 root.geometry("800x500")
@@ -36,7 +36,9 @@ def Exiting():
 ###main Function
 def show():
    messagebox.showinfo( "Starting.....", "Program will Start")
-   #Action.Start()
+   A=1
+   if A==1:
+   	import Action
 def info():
    messagebox.showinfo( "Information", "How to USE TOUR")
 

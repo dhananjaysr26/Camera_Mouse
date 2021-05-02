@@ -1,3 +1,21 @@
 #RED HSV Value
 lower_red = np.array([0,50,50]) #example value
 upper_red = np.array([10,255,255]) #example value
+
+
+-----------------------------------------------------------------
+import easygui
+
+t=easygui.msgbox("This is a message!", title="simple gui")
+tt=easygui.ynbox('Shall I continue?', 'Title', ('Yes', 'No'))
+ttt=easygui.buttonbox('Click on your favorite flavor.', 'Favorite Flavor', ('Chocolate', 'Vanilla', 'Strawberry'))
+print(t)
+print(tt)
+print(ttt)
+
+
+OK
+True
+Vanilla
+[Finished in 5.4s]
+----------------------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 import cv2
+import easygui
 import numpy as np
 import pyautogui
 import time
@@ -289,7 +290,7 @@ def performAction( yp, rc, bc, action, drag, perform):
 def Start():
     global cap
     global y_pos
-    
+
     cap = cv2.VideoCapture(0)
 
     print ('************************')
@@ -297,7 +298,9 @@ def Start():
     print (' Use the trackbars to calibrate and press SPACE when done.')
     print (' Press D to use the default settings.')
     print ('************************')
-    
+    #GUI
+    easygui.msgbox("*Use the trackbars to calibrate and press SPACE when done.\n\n*Press D to use the default settings.", title="Calibration mode")
+
     global yellow_range
     global red_range
     global blue_range
@@ -306,6 +309,7 @@ def Start():
     red_range = calibrateColor('Red', red_range)
     blue_range = calibrateColor('Blue', blue_range)
     print (' Calibration Successfull...')
+    easygui.msgbox("Calibration Successfull", title="info")
     
     cv2.namedWindow('Frame')
     
@@ -315,6 +319,8 @@ def Start():
     print (' Press R to recalibrate color ranges.')
     print (' Press ESC to exit.')
     print ('************************')
+    easygui.msgbox("Press P - Turn ON OFF Mouse Simulation\n\nC - Display Centroid of color\n\nR - Recalibrate Color\n\nEsc - Exit", title="alert")
+    
     
     while(1):
     
